@@ -1,35 +1,62 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"math"
+)
 
 func main() {
-	// Declaración de contantes
-	const pi float64 = 3.14
-	const pi2 = 3.1416
-
-	fmt.Println("pi:", pi)
-	fmt.Println("pi2:", pi2)
-
-	// Declaración de variables
-	base := 12
-	var altura int = 14
-	var area int
-
-	area = base * altura
-
-	fmt.Println(base, altura, area)
-
-	// Zero values
-	var a int
-	var b float64
-	var c string
-	var d bool
-
-	fmt.Println(a, b, c, d)
 
 	// Area de un cuadrado
-	var baseCuadrado int = 10
+	const baseCuadrado = 10
 	areaCuadrado := baseCuadrado * baseCuadrado
+	fmt.Println("Area cuadrado:", areaCuadrado)
 
-	fmt.Println("Area de un cuadrado:", areaCuadrado)
+	x := 10
+	y := 50
+
+	// Suma
+	result := x + y
+	fmt.Println("Suma:", result)
+	
+	// Resta
+	result = y - x
+	fmt.Println("Resta:", result)
+
+	// Multiplicación
+	result = x * y
+	fmt.Println("Multiplicación:", result)
+
+	// División
+	result = y / x
+	fmt.Println("División:", result)
+	
+	// Módulo
+	result = y % x
+	fmt.Println("Módulo:", result)
+
+	// Incremental
+	x++
+	fmt.Println("Incremental:", x)
+	
+	// Decremental
+	x--
+	fmt.Println("Decremental:", x)
+
+	// Retos
+	// -Rectángulo, trapecio y círculo
+	const base = 10
+	const altura = 20
+	area := base * altura
+	fmt.Println("El area de un rectángulo es de:", area)
+
+	const baseMayor = 10
+	const baseMenor = 5
+	const alturaTrapecio = 3
+	areaTrapecio := ( ( baseMayor + baseMenor ) / 2.0 ) * alturaTrapecio
+	fmt.Println("El area de un trapecio es de:", areaTrapecio)
+
+	const radio = 10
+	areaCirculo := math.Pi * radio * radio
+	fmt.Println("El area un un circulo es de:", areaCirculo)
 }
